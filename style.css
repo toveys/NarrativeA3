@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+:root{
+    --col-01: rgb(221, 221, 221);
+    --col-02: rgb(221, 221, 221);
+    --col-03: rgb(221, 221, 221);
+    --col-04: rgb(221, 221, 221);
+    --col-05: rgb(0, 0, 0);
+    --col-06: rgb(200, 200, 200);
+    --col-07: rgb(117, 117, 117);
+    --border-one: dashed 2px white;
+}
+
+@font-face {
+    font-family: Mono-Regular;
+    src: url(./fonts/MonoRegular-jEmAR.ttf);
+    font-family: Mono-Light;
+    src: url(./fonts/MonoLight-VG7yz.ttf);
+    font-family: Mono-Bold;
+    src: url(./fonts/MonoBold-z8jG0.ttf);
+  }
+
+body{
+    background-color: var(--col-07);
+}
+#left-bar{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:15%;
+    height: 100%;
+    background-color: rgba(0, 76, 9, 0.444);
+}
+#right-bar{
+    position:absolute;
+    top:0px;
+    left:100vw;
+    width:15%;
+    height: 100%;
+    translate: -100%;
+    background-color: rgba(0, 76, 9, 0.444);
+}
+#web2{
+    background-color: grey;
+}
+
+#bottom{
+    position:absolute;
+    height:45%;
+    width:100%;
+    border: 5px solid rgb(143, 0, 0);
+    top:55%;
+    background-color: rgb(61, 53, 53);
+    z-index: -1;
+}
+
+#dialogue-window{
+    position:absolute;
+    height:40%;
+    width:60%;
+    border: 5px solid rgb(143, 0, 0);
+    border-radius: 6px;
+    top:75%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: grey;
+}
