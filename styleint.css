@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+body{
+    margin:0%;
+    max-width:100%;
+    background-color:grey;
+    background-image: url("./images/pipes.png");
+    background-size: 10%;
+}
+#middle{
+    position: relative;
+    width:100%;
+    padding-left: 15%;
+    padding-right: 15%;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#face{
+    height:60%;
+    width:100%;
+    background-color:grey;
+    background-image: url("./images/icon.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+#tri{
+    display:grid;
+    grid-template-columns: 15% 70% 15%;
+    height:40%;
+    width:100%;
+}
+#left{
+    background-image: url("./images/barsleft.png");
+    background-size:contain;
+    background-color:black;
+    border-top:ridge;
+    border-bottom:ridge;
+    border-width:3px;
+    border-color:#6b2010;
+}
+#right{
+    background-image: url("./images/barsright.png");
+    background-size:contain;
+    background-color:black;
+    border-top:ridge;
+    border-bottom:ridge;
+    border-width:3px;
+    border-color:#6b2010;
+}
+#center{
+    height:100%;
+    width:100%;
+    background-image: url("./images/rock.png");
+}

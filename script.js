@@ -1,24 +1,51 @@
-class Cell{
-    constructor(noun, amount){
-        this.noun=noun;
-        this.amount=amount;
-    }
-}
-iIndex = new Array();
-const Cells = [];
+
 
 //onload function
 window.onload = function() {
-    fetch('./index.txt')
-    .then(response => response.text())
-    .then(textString => {
-        iIndex = textString.split(/\r?\n|,/);
-        for (i=0; i<iIndex.length; i+=2){
-            let cell = new Cell(iIndex[i], iIndex[i+1]);
-            Cells.push(cell);
-        }
-        // /\r?\n/
-    });
+    let path = document.getElementById("path");
+    let face = document.getElementById("face");
+    let banner = document.getElementById("banner");
+
+    path.style.top = banner.height + "px";
+    //face.style.top = path.height+"px";
 };
 
-//Run on Button Press
+//onload function
+window.onresize = function() {
+    let path = document.getElementById("path");
+    let face = document.getElementById("face");
+    let banner = document.getElementById("banner");
+
+    path.style.top = banner.height+"px";
+    //face.style.top = path.height+"px";
+};
+
+middle = document.getElementById("middle");
+middle.addEventListener('scroll', Scroll);
+
+function Scroll(){ 
+    face = document.getElementById("face");
+
+    if (isInViewport(face, path) !== false){
+        let black = document.getElementById("black");
+        rect = face.getBoundingClientRect();
+
+        b = (rect.y)/100;
+        black.style.backgroundColor = 'rgba(0,0,0,'+b+')';
+    }
+    
+}
+
+function isInViewport(element, element2) {
+    const rect = element.getBoundingClientRect();
+    const rect2 = element2.getBoundingClientRect();
+
+    if(rect.top + rect2.top <= 0){
+        return(
+            rect.top + rect2.top
+        );
+    }
+    else{
+        return(false);
+    }
+}
